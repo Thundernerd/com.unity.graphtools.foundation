@@ -251,7 +251,7 @@ namespace UnityEditor.GraphToolsFoundation.Overdrive
         }
 
         /// <inheritdoc />
-        protected override void SerializeForUndo(SerializedReferenceDictionary<string, string> stateComponentUndoData)
+        protected internal override void SerializeForUndo(SerializedReferenceDictionary<string, string> stateComponentUndoData)
         {
             base.SerializeForUndo(stateComponentUndoData);
 
@@ -262,7 +262,7 @@ namespace UnityEditor.GraphToolsFoundation.Overdrive
         }
 
         /// <inheritdoc />
-        protected override void DeserializeFromUndo(SerializedReferenceDictionary<string, string> stateComponentUndoData)
+        protected internal override void DeserializeFromUndo(SerializedReferenceDictionary<string, string> stateComponentUndoData)
         {
             base.DeserializeFromUndo(stateComponentUndoData);
 
@@ -292,7 +292,7 @@ namespace UnityEditor.GraphToolsFoundation.Overdrive
         }
 
         /// <inheritdoc />
-        protected override void ValidateAfterDeserialize()
+        protected internal override void ValidateAfterDeserialize()
         {
             SelectionState.ValidateAfterDeserialize();
             GraphViewState.ValidateAfterDeserialize();

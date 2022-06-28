@@ -86,7 +86,7 @@ namespace UnityEditor.GraphToolsFoundation.Overdrive
             this.SetCheckedPseudoState(IsSelected());
         }
 
-        protected void OnCustomStyleResolved(CustomStyleResolvedEvent evt)
+        protected new void OnCustomStyleResolved(CustomStyleResolvedEvent evt)
         {
             int prevLayer = m_Layer;
             if (!m_LayerIsInline)

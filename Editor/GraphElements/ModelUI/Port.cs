@@ -171,7 +171,7 @@ namespace UnityEditor.GraphToolsFoundation.Overdrive
             Dependencies.AddModelDependency(edgeModel);
         }
 
-        protected void OnCustomStyleResolved(CustomStyleResolvedEvent evt)
+        protected new void OnCustomStyleResolved(CustomStyleResolvedEvent evt)
         {
             if (evt.customStyle.TryGetValue(m_PortColorProperty, out var portColorValue))
                 PortColor = portColorValue;
